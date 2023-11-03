@@ -1,18 +1,17 @@
 import styled from "styled-components";
 
 export const CheckoutItemContainer = styled.div`
-  width: 100%;
+  width: 55%;
   display: flex;
   min-height: 100px;
   border-bottom: 1px solid darkgrey;
   padding: 15px 0;
   font-size: 20px;
   align-items: center;
-  @media screen and (min-width: 800px) {
-    border-bottom: 1px solid red;
-  }
+
   @media screen and (min-width: 200px) {
     font-size: 12px;
+    width: 100%;
   }
 `;
 
@@ -28,7 +27,7 @@ export const ImageContainer = styled.div`
 
 export const BaseSpan = styled.span`
   width: 23%;
-  @media screen and (min-width: 200px) {
+  @media screen and (max-width: 200px) {
     margin-left: 5px;
   }
 `;
