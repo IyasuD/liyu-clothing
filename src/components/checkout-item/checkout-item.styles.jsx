@@ -8,6 +8,12 @@ export const CheckoutItemContainer = styled.div`
   padding: 15px 0;
   font-size: 20px;
   align-items: center;
+  @media screen and (min-width: 800px) {
+    border-bottom: 1px solid red;
+  }
+  @media screen and (min-width: 200px) {
+    font-size: 12px;
+  }
 `;
 
 export const ImageContainer = styled.div`
@@ -22,6 +28,9 @@ export const ImageContainer = styled.div`
 
 export const BaseSpan = styled.span`
   width: 23%;
+  @media screen and (min-width: 200px) {
+    margin-left: 5px;
+  }
 `;
 
 export const Quantity = styled(BaseSpan)`
@@ -34,6 +43,9 @@ export const Arrow = styled.div`
 
 export const Value = styled.span`
   margin: 0 10px;
+  @media screen and (min-width: 200px) {
+    margin: 0 7px;
+  }
 `;
 
 export const RemoveButton = styled.div`
