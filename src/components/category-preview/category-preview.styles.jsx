@@ -15,6 +15,10 @@ export const Title = styled(Link)`
   font-size: 28px;
   margin-bottom: 25px;
   cursor: pointer;
+  @media screen and (max-width: 800px) {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
 `;
 
 export const Preview = styled.div`

@@ -32,6 +32,14 @@ export const Body = styled.div`
     font-weight: lighter;
     font-size: 16px;
   }
+  @media screen and (max-width: 800px) {
+    h2 {
+      font-size: 15px;
+    }
+  }
+  p {
+    font-size: 9px;
+  }
 `;
 
 export const DirectoryItemContainer = styled.div`
@@ -65,7 +73,7 @@ export const DirectoryItemContainer = styled.div`
       opacity: 0.9;
     }
   }
-  @media screen and (max-width:800px){
-    height:200px
+  @media screen and (max-width: 800px) {
+    height: 200px;
   }
 `;
