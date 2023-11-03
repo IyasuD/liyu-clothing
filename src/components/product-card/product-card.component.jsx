@@ -10,7 +10,7 @@ import {
 
 const ProductCard = ({ product }) => {
   const { addItemToCart } = useContext(CartContext);
-  const { name, price, imageUrl, id } = product;
+  const { name, price, imageUrl } = product;
   const addProductToCart = () => addItemToCart(product);
   return (
     <ProductCartContainer>
