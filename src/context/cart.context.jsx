@@ -74,10 +74,8 @@ export const CartContext = createContext({
   cartTotal: 0,
 });
 export const CartProvider = ({ children }) => {
-  const [{ cartItems, isCartOpen, cartTotal }, dispatch] = useReducer(
-    cartReducer,
-    INITITAL_SATE
-  );
+  const [{ cartItems, isCartOpen, cartTotal, cartCount }, dispatch] =
+    useReducer(cartReducer, INITITAL_SATE);
 
   const updateCartItemsReducer = (newCartItems) => {
     const newCartCount = newCartItems.reduce(
@@ -122,7 +120,7 @@ export const CartProvider = ({ children }) => {
     removeItemFromCart,
     clearItemFromCart,
     cartItems,
-
+    cartCount,
     cartTotal,
   };
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
