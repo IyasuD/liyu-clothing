@@ -9,8 +9,9 @@ import {
 
 import Button from "../button/button.component";
 import CartItem from "../cart-item/cart-item.component";
+import { selectCartItems } from "../../store/cart/cart.select.js";
 const CartDropDown = () => {
-  const cartItems = useSelector(CartItems);
+  const cartItems = useSelector(selectCartItems);
   const navigate = useNavigate();
   const goToCheckoutHandler = () => {
     navigate("/checkout");
