@@ -12,13 +12,13 @@ export const CategoriesProvider = ({ children }) => {
   // useEffect(() => {
   //   addCollectionAndDocuments("categories", SHOP_DATA);
   // }, []);
-  useEffect(() => {
-    const getCategoriesMap = async () => {
-      const categoriesMap = await getCategoriesAndDocuments();
-      setCategoriesMap(categoriesMap);
-    };
-    getCategoriesMap();
-  }, []);
+  // useEffect(() => {
+  //   const getCategoriesMap = async () => {
+  //     const categoriesMap = await getCategoriesAndDocuments();
+  //     setCategoriesMap(categoriesMap);
+  //   };
+  //   getCategoriesMap();
+  // }, []);
   const value = { categoriesMap };
   return (
     <CategoriesContext.Provider value={value}>

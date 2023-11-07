@@ -3,8 +3,10 @@ import { useContext, useState, useEffect, Fragment } from "react";
 import { CategoriesContext } from "../../context/categories.context";
 import ProductCard from "../../components/product-card/product-card.component";
 import { CategoryContainer, Title } from "./Category.styles.jsx";
+import { useSelector } from "react-redux";
+import { selectCategoriesMap } from "../../store/categories/categories.select";
 const Category = () => {
-  const { categoriesMap } = useContext(CategoriesContext);
+  const categoriesMap = useSelector(selectCategoriesMap);
   const { category } = useParams();
   const [products, setProducts] = useState(categoriesMap[category]);
   useEffect(() => {

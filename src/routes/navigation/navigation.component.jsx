@@ -1,9 +1,10 @@
+import { useSelector } from "react-redux";
 import { Fragment, useContext } from "react";
 import CartIcon from "../../components/cart-icon/cart-icon.component";
 import CartDropDown from "../../components/cart-dropdown/cart-dropdown.component";
 import { Outlet } from "react-router-dom";
-import { UserContext } from "../../context/user.context";
-import { CartContext } from "../../context/cart.context";
+
+import { selectIsCartOpen } from "../../store/cart/cart.select";
 import { ReactComponent as LiyuLogo } from "../../assets/crown.svg";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
 import {
@@ -12,14 +13,16 @@ import {
   NavLink,
   LogoContainer,
 } from "./navigation.styles.jsx";
+import { selectCurrentUser } from "../../store/user/user.selector";
 const Navigation = () => {
-  const { currentUser, setCurrentUser } = useContext(UserContext);
-  const { isCartOpen } = useContext(CartContext);
+  const currentUser = useSelector(selectCurrentUser);
+  //const { currentUser, setCurrentUser } = useContext(UserContext);
+  const isCartOpen = useSelector(selectIsCartOpen);
   //console.log("from navigation", currentUser);
-  //   const signOutHandler = async () => {
-  //     const res = await signOutUser();
-  //     setCurrentUser(null);
-  //   };
+  // const signOutHandler = async () => {
+  //   const res = await signOutUser();
+  //   setCurrentUser(null);
+  // };
   return (
     <Fragment>
       <NavigationContainer>
