@@ -1,5 +1,5 @@
 import { compose, createStore, applyMiddleware } from "redux";
-
+import thunk from "redux-thunk";
 //import logger from "redux-logger";
 
 import { rootReducer } from "./root-reducer";
@@ -13,6 +13,6 @@ import logger from "redux-logger";
 //   console.log("currentState", store.getState());
 //   next(action);
 // };
-const middleWares = [logger];
+const middleWares = [logger, thunk];
 const composedEnhancers = compose(applyMiddleware(...middleWares));
 export const store = createStore(rootReducer, undefined, composedEnhancers);
